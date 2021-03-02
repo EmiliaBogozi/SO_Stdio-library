@@ -1,0 +1,25 @@
+==10871== Memcheck, a memory error detector
+==10871== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==10871== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==10871== Command: _test/bin/test_popen_read ./_test/work/test_40
+==10871== Parent PID: 10866
+==10871== 
+==10871== error calling PR_SET_PTRACER, vgdb might block
+==10871== 
+==10871== HEAP SUMMARY:
+==10871==     in use at exit: 16,000 bytes in 1 blocks
+==10871==   total heap usage: 8 allocs, 7 frees, 22,316 bytes allocated
+==10871== 
+==10871== 16,000 bytes in 1 blocks are still reachable in loss record 1 of 1
+==10871==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10871==    by 0x109057: main (test_popen_read.c:51)
+==10871== 
+==10871== LEAK SUMMARY:
+==10871==    definitely lost: 0 bytes in 0 blocks
+==10871==    indirectly lost: 0 bytes in 0 blocks
+==10871==      possibly lost: 0 bytes in 0 blocks
+==10871==    still reachable: 16,000 bytes in 1 blocks
+==10871==         suppressed: 0 bytes in 0 blocks
+==10871== 
+==10871== For counts of detected and suppressed errors, rerun with: -v
+==10871== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
