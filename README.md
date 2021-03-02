@@ -20,4 +20,5 @@ lipsuri in implementare, astfel unele teste nu trec.
 
 
 -- Compilare
+
 make
